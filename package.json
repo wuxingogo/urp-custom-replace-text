@@ -10,6 +10,10 @@
 	"categories": [
 		"Other"
 	],
+	"repository": {
+        "type": "git",
+        "url": "https://github.com/sh1ch/vscode-custom-replace-text.git"
+    },
 	"activationEvents": [
 		"onCommand:extension.replaceText",
 		"onCommand:extension.sample"
