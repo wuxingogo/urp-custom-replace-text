@@ -1,0 +1,64 @@
+{
+	"name": "custom-replace-text",
+	"displayName": "custom replace text",
+	"description": "Do replace text with json pattern file.",
+	"version": "1.0.0",
+	"publisher": "sh1ch",
+	"engines": {
+		"vscode": "^1.33.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.replaceText",
+		"onCommand:extension.sample"
+	],
+	"main": "./out/src/extension.js",
+	"contributes": {
+		"menus": {
+			"editor/context": [
+				{
+					"when": "editorHasSelection",
+					"command": "extension.replaceText",
+					"group": "sh1chGroup@1"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "extension.replaceText",
+				"title": "%cmd.replace-text.title%"
+			},
+			{
+				"command": "extension.openConfigFile",
+				"title": "%cmd.show-config.title%"
+			}
+		],
+		"keybindings": [
+			{
+			  "key": "ctrl+shift+r",
+			  "command": "extension.replaceText"
+			},
+			{
+			  "key": "ctrl+shift+o",
+			  "command": "extension.openConfigFile"
+			}
+		  ]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"tslint": "^5.12.1",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	},
+	"dependencies": {}
+}
