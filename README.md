@@ -4,26 +4,24 @@
 
 ## Features
 
-"urp-replace-text" is a replace text tool which allows you use json file when replace selection text.
+"urp-replace-text" is a text replacement tool for Unity's built-in shaders. It allows you to use regular expressions to replace text within selected URP shader code.
 
 **Demo**: Assume that the configuration file is as follows:
 
 ```json
 {
-    "(": "%28",
-    ")": "%29",
-    "before": "after"
+    "/sampler2D (\\w+)/" : "TEXTURE2D($1); SAMPLER(sampler$1)",
 }
 ```
 
 It becomes like this：
 
 ```txt
-(before text)
+fixed3 Mask = tex2D( _Control, i.uv[3].xy );
 ```
 ↓
 ```txt
-%28after text%29
+half3 Mask = SAMPLE_TEXTURE2D( _Control, sampler _Control, i.uv[3].xy );
 ```
 
 ## Shortcuts
@@ -37,4 +35,4 @@ It becomes like this：
 
 Please post and view issues on [GitHub][issues]
 
-[issues]: https://github.com/sh1ch/vscode-urp-replace-text/issues "Post issues"
+[issues]: https://github.com/wuxingogo/urp-custom-replace-text/issues "Post issues"
