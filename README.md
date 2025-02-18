@@ -1,10 +1,10 @@
-# custom-replace-text README
+# urp-replace-text README
 
-"custom-replace-text" is a replace text tool.
+"urp-replace-text" is a replace text tool.
 
 ## Features
 
-"custom-replace-text" is a replace text tool which allows you use json file when replace selection text.
+"urp-replace-text" is a replace text tool which allows you use json file when replace selection text.
 
 **Demo**: Assume that the configuration file is as follows:
 
@@ -37,4 +37,4 @@ It becomes like this：
 
 Please post and view issues on [GitHub][issues]
 
-[issues]: https://github.com/sh1ch/vscode-custom-replace-text/issues "Post issues"
+[issues]: https://github.com/sh1ch/vscode-urp-replace-text/issues "Post issues"

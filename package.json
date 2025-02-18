@@ -1,6 +1,6 @@
 {
-	"name": "custom-replace-text",
-	"displayName": "custom replace text",
+	"name": "urp-replace-text",
+	"displayName": "urp replace text",
 	"description": "Do replace text with json pattern file.",
 	"version": "1.0.0",
 	"publisher": "sh1ch",
@@ -12,7 +12,7 @@
 	],
 	"repository": {
         "type": "git",
-        "url": "https://github.com/sh1ch/vscode-custom-replace-text.git"
+        "url": "https://github.com/sh1ch/vscode-urp-replace-text.git"
     },
 	"activationEvents": [
 		"onCommand:extension.replaceText",
