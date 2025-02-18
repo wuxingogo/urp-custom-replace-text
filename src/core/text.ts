@@ -44,15 +44,18 @@ export async function replaceText(replaceFilePath: string) {
 			let regex1:RegExp;
 			regex1 = /(\w+) (\w+)/;
 			var val = replaces[key].toString();
-            try {
+            if (key.startsWith("/")) {
                 // 如果 key 是有效的正则表达式字符串，创建正则对象
                 regex = stringToRegex(key);
 				
 				text = text.replace(regex, val);
-            } catch (err) {
+            }
+            else
+            {
                 var temp = text.split(key);
 				text = temp.join(val);
             }
+            
 			
         }
 
