@@ -3,7 +3,8 @@
 	"displayName": "urp replace text",
 	"description": "Do replace text with json pattern file.",
 	"version": "1.0.0",
-	"publisher": "sh1ch & wuxingogo",
+	"publisher": "wuxingogo",
+	"icon":"image/icon.png",
 	"engines": {
 		"vscode": "^1.33.0"
 	},
