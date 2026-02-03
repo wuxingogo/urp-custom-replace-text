@@ -2,7 +2,7 @@
 	"name": "urp-replace-text",
 	"displayName": "urp replace text",
 	"description": "Do replace text with json pattern file.",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"publisher": "wuxingogo",
 	"icon":"image/icon.png",
 	"engines": {

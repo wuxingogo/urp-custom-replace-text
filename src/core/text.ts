@@ -48,12 +48,20 @@ export async function replaceText(replaceFilePath: string) {
                 // 如果 key 是有效的正则表达式字符串，创建正则对象
                 regex = stringToRegex(key);
 				
-				text = text.replace(regex, val);
+                
+				var newtex = text.replace(regex, val);
+                console.log("source text : " + text + ", replace text : " + newtex);
+                text = newtex;
             }
             else
             {
                 var temp = text.split(key);
-				text = temp.join(val);
+                var newtex = temp.join(val);
+                console.log("source text : " + text + ", key : " + key + ", join : " + val + ", replace text : " + newtex);
+				text = newtex;
+
+                
+
             }
             
 			

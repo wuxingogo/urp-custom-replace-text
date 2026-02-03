@@ -9,6 +9,7 @@
     "/////-----首先去除空格1----//////": "------",
     "tex2D( ": "tex2D(",
     "/tex2D\\(([^,]+),\\s*([^)]+)\\)/":"SAMPLE_TEXTURE2D($1, sampler$1, $2)",
+    "/tex2Dlod\\(([^,]+),\\s*([^)]+)\\)/":"SAMPLE_TEXTURE2D_LOD($1, sampler$1, $2)",
     "/////-----首先去除空格2----//////": "------",
     "texCUBE( ": "texCUBE(",
     "/texCUBE\\(([^,]+),\\s*([^)]+)\\)/" : "SAMPLE_TEXTURECUBE($1, sampler$1, $2)",
@@ -30,15 +31,15 @@
     
     "UnityWorldToViewPos":"TransformWorldToView",
 
-    "UNITY_FOG_COORDS(1)" : " half fogCoord : TEXCOORD1;",
-    "UNITY_FOG_COORDS(2)" : " half fogCoord : TEXCOORD2;",
-    "UNITY_FOG_COORDS(3)" : " half fogCoord : TEXCOORD3;",
-    "UNITY_FOG_COORDS(4)" : " half fogCoord : TEXCOORD4;",
-    "UNITY_FOG_COORDS(5)" : " half fogCoord : TEXCOORD5;",
-    "UNITY_FOG_COORDS(6)" : " half fogCoord : TEXCOORD6;",
-    "UNITY_FOG_COORDS(7)" : " half fogCoord : TEXCOORD7;",
-    "UNITY_FOG_COORDS(8)" : " half fogCoord : TEXCOORD8;",
-    "UNITY_FOG_COORDS(9)" : " half fogCoord : TEXCOORD9;",
+    "UNITY_FOG_COORDS(1)" : "half fogCoord : TEXCOORD1;",
+    "UNITY_FOG_COORDS(2)" : "half fogCoord : TEXCOORD2;",
+    "UNITY_FOG_COORDS(3)" : "half fogCoord : TEXCOORD3;",
+    "UNITY_FOG_COORDS(4)" : "half fogCoord : TEXCOORD4;",
+    "UNITY_FOG_COORDS(5)" : "half fogCoord : TEXCOORD5;",
+    "UNITY_FOG_COORDS(6)" : "half fogCoord : TEXCOORD6;",
+    "UNITY_FOG_COORDS(7)" : "half fogCoord : TEXCOORD7;",
+    "UNITY_FOG_COORDS(8)" : "half fogCoord : TEXCOORD8;",
+    "UNITY_FOG_COORDS(9)" : "half fogCoord : TEXCOORD9;",
     "UNITY_TRANSFER_FOG(o,o.vertex);" : "o.fogCoord.x = ComputeFogFactor(o.vertex.z);",
     "UNITY_APPLY_FOG(i.fogCoord, col);" : "MixFog(col.rgb, i.fogCoord);"
 
